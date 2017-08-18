@@ -1,4 +1,3 @@
-import { utils } from './utils.js';
 import { directionLib } from './direction.js';
 import { CONSTANTS } from './constants.js';
 

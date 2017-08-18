@@ -1,5 +1,5 @@
 import { Vector } from './vector.js';
-import { utils } from './utils.js';
+import { randomElement } from './utils.js';
 
 export const DIRECTIONS = ["n", "ne", "e", "se", "s", "sw", "w", "nw"];
 
