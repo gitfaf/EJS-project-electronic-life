@@ -47,6 +47,10 @@ const legend = {
     'o': BouncingCritter
 };
 
-let world = new World(randomPlan(), legend);
-
-console.log(world.toSring());
+function run () {
+    let world = new World(randomPlan(), legend);
+    console.log(world.toSring());
+}
+module.exports = {
+    run
+};
