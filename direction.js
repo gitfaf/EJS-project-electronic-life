@@ -1,4 +1,5 @@
 var Vector = require('./vector').Vector;
+const utils = require('./utils');
 
 const DIRECTIONS = ["n", "ne", "e", "se", "s", "sw", "w", "nw"];
 
@@ -14,7 +15,11 @@ const DIRECTION_VECTORS = {
 };
 
 function randomDirection() {
-    return DIRECTIONS[Math.floor(Math.random() * DIRECTIONS.length)];
+    return utils.randomElement(DIRECTIONS);
+}
+
+function randomDirectionVector () {
+    return DIRECTION_VECTORS[randomDirection(DIRECTIONS)];
 }
 
 module.exports = {
