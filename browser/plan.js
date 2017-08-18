@@ -1,7 +1,6 @@
-import { plans } from './constants.js';
+import { CONSTANTS } from './constants.js';
 import { randomElement } from './utils.js';
 
 export function randomPlan () {
-    return randomElement(plans);
+    return randomElement(CONSTANTS.plans);
 }
-
