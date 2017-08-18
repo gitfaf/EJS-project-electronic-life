@@ -15,7 +15,7 @@ export const DIRECTION_VECTORS = {
 };
 
 export function randomDirection() {
-    return utils.randomElement(DIRECTIONS);
+    return randomElement(DIRECTIONS);
 }
 
 export function randomDirectionVector () {
