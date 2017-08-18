@@ -3,14 +3,14 @@ const Grid = require('./grid').Grid;
 const Vector = require('./vector').Vector;
 const Wall = require('./wall').Wall;
 const BouncingCritter = require('./critter').BouncingCritter;
+const randomPlan = require('./plan').randomPlan;
 
 function elementFromChar (legend, ch) {
     if(ch === CONSTANTS.emptyCell) {
         return null;
     }
-    let element = new legend[ch]();
-    element.originChar = ch;
-    return element;
+    let Constructor = legend[ch];
+    return new Constructor(ch);
 }
 
 function charFromElement (element) {
@@ -42,22 +42,11 @@ World.prototype.toSring = function () {
     return output;
 };
 
-const plan =
-[
-    '####################',
-    '##  0      0      ##',
-    '##      #   #     ##',
-    '##        0       ##',
-    '##  #   #   #     ##',
-    '##   #       #    ##',
-    '##    0   0#      ##',
-    '##      #         ##',
-    '##      #0#0      ##',
-    '####################',
-];
-
-let world = new World(plan, {
+const legend = {
     '#': Wall,
-    '0': BouncingCritter
-});
+    'o': BouncingCritter
+};
+
+let world = new World(randomPlan(), legend);
+
 console.log(world.toSring());

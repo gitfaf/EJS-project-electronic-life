@@ -2,7 +2,8 @@ const utils = require('./utils');
 const directionLib = require('./direction');
 const CONSTANTS = require('./constants');
 
-function BouncingCritter () {
+function BouncingCritter (originChar) {
+    this.originChar = originChar;
     this.direction = directionLib.randomDirection();
 }
 BouncingCritter.prototype.isUnsuitableDirection = function (view) {
@@ -25,4 +26,8 @@ BouncingCritter.prototype.act = function (view) {
         type: 'move',
         direction: this.direction
     };
+};
+
+module.exports = {
+    BouncingCritter
 };
