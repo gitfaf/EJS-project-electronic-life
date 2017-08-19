@@ -1,3 +1,5 @@
+const Vector = require('./vector').Vector;
+
 function Grid (width, height) {
     this.space = new Array(width * height);
     this.width = width;

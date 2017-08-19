@@ -1,11 +1,12 @@
-const CONSTANTS = require('./constants');
+console.log('utils.js');
 
 function randomElement (array) {
+    console.log('utils:', randomElement);
     return array[Math.floor(Math.random() * array.length)];
 }
 
 function elementFromChar (legend, ch) {
-    if(ch === CONSTANTS.emptyCell) {
+    if(ch === ' ') {
         return null;
     }
     let Constructor = legend[ch];
@@ -13,7 +14,7 @@ function elementFromChar (legend, ch) {
 }
 
 function charFromElement (element) {
-    return element === null ? CONSTANTS.emptyCell : element.originChar;
+    return element === null ? ' ' : element.originChar;
 }
 
 module.exports = {

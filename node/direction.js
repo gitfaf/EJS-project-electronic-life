@@ -1,5 +1,6 @@
+console.log('direction.js');
 const utils = require('./utils');
-var Vector = require('./vector').Vector;
+const Vector = require('./vector').Vector;
 
 const DIRECTIONS = ["n", "ne", "e", "se", "s", "sw", "w", "nw"];
 
@@ -15,6 +16,7 @@ const DIRECTION_VECTORS = {
 };
 
 function randomDirection() {
+    console.log('direction:', utils, utils.randomElement);
     return utils.randomElement(DIRECTIONS);
 }
 
