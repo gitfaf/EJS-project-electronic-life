@@ -3,7 +3,7 @@ const Grid = require('./grid').Grid;
 const Vector = require('./vector').Vector;
 const Wall = require('./wall').Wall;
 const BouncingCritter = require('./critter').BouncingCritter;
-const randomPlan = require('./plan').randomPlan;
+const randomMap = require('./map').randomMap;
 
 function elementFromChar (legend, ch) {
     if(ch === CONSTANTS.emptyCell) {
@@ -48,9 +48,10 @@ const legend = {
 };
 
 function run () {
-    let world = new World(randomPlan(), legend);
+    let world = new World(randomMap(), legend);
     console.log(world.toSring());
 }
+
 module.exports = {
     run
 };

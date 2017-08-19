@@ -3,7 +3,7 @@ import { Grid } from './grid.js';
 import { Vector } from './vector.js';
 import { Wall } from './wall.js';
 import { BouncingCritter } from './critter.js';
-import { randomPlan } from './plan.js';
+import { randomMap } from './map.js';
 
 function elementFromChar (legend, ch) {
     if(ch === CONSTANTS.emptyCell) {
@@ -48,6 +48,6 @@ const legend = {
 };
 
 export function run () {
-    let world = new World(randomPlan(), legend);
+    let world = new World(randomMap(), legend);
     console.log(world.toSring());
 }

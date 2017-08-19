@@ -1,7 +1,7 @@
 const CONSTANTS = {
     emptyCell: ' ',
     filledCell: '#',
-    plans: [
+    maps: [
         [
             '####################',
             '##  o      o      ##',
