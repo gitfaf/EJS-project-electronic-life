@@ -12,7 +12,7 @@ BouncingCritter.prototype.isUnsuitableDirection = function (view) {
 BouncingCritter.prototype.findSuitableDirection = function (view) {
     let direction = view.find(CONSTANTS.emptyCell);
     if (!direction) {
-        while (direction !== this.direction) {
+        while (direction === this.direction) {
             direction = directionLib.randomDirection();
         }
     }

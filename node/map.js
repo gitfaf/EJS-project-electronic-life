@@ -1,10 +1,10 @@
-const plans = require('./constants').plans;
+const maps = require('./constants').maps;
 const randomElement = require('./utils').randomElement;
 
-function randomPlan () {
-    return randomElement(plans);
+function randomMap () {
+    return randomElement(maps);
 }
 
 module.exports = {
-    randomPlan
+    randomMap
 };
