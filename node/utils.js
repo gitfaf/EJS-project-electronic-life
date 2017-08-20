@@ -1,7 +1,4 @@
-console.log('utils.js');
-
 function randomElement (array) {
-    console.log('utils:', randomElement);
     return array[Math.floor(Math.random() * array.length)];
 }
 

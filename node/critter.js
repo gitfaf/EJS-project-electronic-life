@@ -4,7 +4,6 @@ const CONSTANTS = require('./constants');
 
 function BouncingCritter (originChar) {
     this.originChar = originChar;
-    console.log('critter:', directionLib);
     this.direction = directionLib.randomDirection();
 }
 BouncingCritter.prototype.isUnsuitableDirection = function (view) {
