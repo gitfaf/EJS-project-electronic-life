@@ -69,7 +69,7 @@ const legend = {
 
 function run () {
     let world = new World(randomMap(), legend);
-    for (let i = 0; i < 100; i++) {
+    for (let i = 0; i < 3; i++) {
         world.turn();
         console.log(world.toSring());
     }
